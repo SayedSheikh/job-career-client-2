@@ -3,7 +3,6 @@ import useAuth from "../Hooks/useAuth";
 import AppliedJobsTable from "../Components/AppliedJobsTable";
 import Loding from "../Components/Loding";
 
-// import { appliedJobs } from "../APIs/appliedJobsAPI";
 import useAppliedJobAPI from "../APIs/useAppliedJobAPI";
 
 const AppliedJobs = () => {
