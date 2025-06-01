@@ -2,13 +2,15 @@ import React, { Suspense } from "react";
 import useAuth from "../Hooks/useAuth";
 import AppliedJobsTable from "../Components/AppliedJobsTable";
 import Loding from "../Components/Loding";
-
-import useAppliedJobAPI from "../APIs/useAppliedJobAPI";
+// import { appliedJobs } from "../APIs/appliedJobsAPI";
+import useAppliedAPI from "../APIs/useAppliedAPI";
 
 const AppliedJobs = () => {
   const { user } = useAuth();
 
-  const { appliedJobs } = useAppliedJobAPI();
+  const { appliedPromise: appliedJobs } = useAppliedAPI();
+
+  console.log(appliedJobs);
 
   if (!user) {
     return <Loding></Loding>;
