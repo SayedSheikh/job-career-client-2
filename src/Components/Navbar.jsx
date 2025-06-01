@@ -1,7 +1,6 @@
 import React from "react";
 import { Link, NavLink } from "react-router";
 import useAuth from "../Hooks/useAuth";
-import axios from "axios";
 import Swal from "sweetalert2";
 
 const Navbar = () => {
@@ -36,20 +35,8 @@ const Navbar = () => {
 
   const handleClick = () => {
     logOut()
-      .then(() => {
-        axios
-          .post("http://localhost:3000/logout", { Credential: true })
-          .then((res) => {
-            console.log(res);
-
-            Swal.fire({
-              icon: "success",
-              title: "Your work has been saved",
-              showConfirmButton: false,
-              timer: 1500,
-            });
-          })
-          .catch((err) => console.log(err));
+      .then((res) => {
+        console.log(res);
       })
       .catch((err) => console.log(err.code));
   };

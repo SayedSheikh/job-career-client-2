@@ -17,11 +17,7 @@ const JobApplication = () => {
     if (!user) {
       return;
     }
-    fetch(`http://localhost:3000/myJobPost/applications/${id}`, {
-      headers: {
-        token: user.accessToken,
-      },
-    })
+    fetch(`http://localhost:3000/myJobPost/applications/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setData(data);
