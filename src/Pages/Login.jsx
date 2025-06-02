@@ -13,9 +13,8 @@ const Login = () => {
   const from = location.state || "/";
   const handleGoogle = () => {
     googleSignIn()
-      .then((res) => {
+      .then(() => {
         navigate(from);
-        console.log(res);
       })
       .catch((err) => console.log(err.code));
   };

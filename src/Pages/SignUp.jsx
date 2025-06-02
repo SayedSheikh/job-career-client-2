@@ -8,7 +8,7 @@ const SignUp = () => {
 
   const handleGoogle = () => {
     googleSignIn()
-      .then((res) => console.log(res))
+      .then()
       .catch((err) => console.log(err.code));
   };
   return (

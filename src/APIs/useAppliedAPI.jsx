@@ -4,11 +4,11 @@ import useSecureAxios from "../Hooks/useSecureAxios";
 const useAppliedAPI = () => {
   const secureAxios = useSecureAxios();
 
-  const appliedPromise = (email) => {
+  const appliedJobs = (email) => {
     return secureAxios.get(`/appliedJobs?email=${email}`);
   };
   return {
-    appliedPromise,
+    appliedJobs,
   };
 };
 

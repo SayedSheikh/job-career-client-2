@@ -2,7 +2,6 @@ import React, { use } from "react";
 
 const AppliedJobsTable = ({ appliedJobs }) => {
   const { data } = use(appliedJobs);
-  console.log(data);
 
   const jobStatus = (status) => {
     if (!status || status === "pending") {

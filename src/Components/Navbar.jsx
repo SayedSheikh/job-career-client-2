@@ -35,9 +35,7 @@ const Navbar = () => {
 
   const handleClick = () => {
     logOut()
-      .then((res) => {
-        console.log(res);
-      })
+      .then(() => {})
       .catch((err) => console.log(err.code));
   };
   return (

@@ -8,9 +8,7 @@ import useAppliedAPI from "../APIs/useAppliedAPI";
 const AppliedJobs = () => {
   const { user } = useAuth();
 
-  const { appliedPromise: appliedJobs } = useAppliedAPI();
-
-  console.log(appliedJobs);
+  const { appliedJobs } = useAppliedAPI();
 
   if (!user) {
     return <Loding></Loding>;

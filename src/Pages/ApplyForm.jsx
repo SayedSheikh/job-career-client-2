@@ -15,7 +15,6 @@ const ApplyForm = () => {
     const values = Object.fromEntries(formData.entries());
     values.jobId = jobId;
     values.email = user.email;
-    console.log(values);
 
     axios
       .post("http://localhost:3000/apply", values)
